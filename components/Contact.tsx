@@ -33,14 +33,14 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-luxury-black px-6">
+    <section id="contact" className="py-24 bg-white dark:bg-luxury-black px-6 transition-colors duration-300">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-white font-bold mb-6">Start Your Project</h2>
-          <p className="text-gray-400 text-lg">Ready to build something extraordinary? Tell us about your vision.</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-gray-900 dark:text-white font-bold mb-6">Start Your Project</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">Ready to build something extraordinary? Tell us about your vision.</p>
         </div>
 
-        <div className="bg-luxury-charcoal p-8 md:p-12 border border-white/5 relative overflow-hidden">
+        <div className="bg-gray-50 dark:bg-luxury-charcoal p-8 md:p-12 border border-gray-200 dark:border-white/5 relative overflow-hidden transition-colors duration-300 shadow-xl dark:shadow-none">
           {/* Decorative glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
@@ -49,8 +49,8 @@ const Contact: React.FC = () => {
               <div className="w-20 h-20 bg-gold-500/10 rounded-full flex items-center justify-center mb-6">
                 <Send className="w-8 h-8 text-gold-500" />
               </div>
-              <h3 className="text-3xl font-serif text-white mb-4">Inquiry Received</h3>
-              <p className="text-gray-400">Thank you for contacting Cornerstone Web. We will be in touch shortly.</p>
+              <h3 className="text-3xl font-serif text-gray-900 dark:text-white mb-4">Inquiry Received</h3>
+              <p className="text-gray-600 dark:text-gray-400">Thank you for contacting Cornerstone Web. We will be in touch shortly.</p>
               <button 
                 onClick={() => setSubmitted(false)}
                 className="mt-8 text-gold-500 hover:text-gold-400 underline underline-offset-4"
@@ -62,24 +62,24 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-xs uppercase tracking-widest text-gold-500/80 font-semibold">Name</label>
+                  <label htmlFor="name" className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-500/80 font-semibold">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-luxury-black border border-gray-800 text-white p-4 focus:border-gold-500 focus:outline-none transition-colors"
+                    className="w-full bg-white dark:bg-luxury-black border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white p-4 focus:border-gold-500 focus:outline-none transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-xs uppercase tracking-widest text-gold-500/80 font-semibold">Email</label>
+                  <label htmlFor="email" className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-500/80 font-semibold">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-luxury-black border border-gray-800 text-white p-4 focus:border-gold-500 focus:outline-none transition-colors"
+                    className="w-full bg-white dark:bg-luxury-black border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white p-4 focus:border-gold-500 focus:outline-none transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -87,13 +87,13 @@ const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2 relative">
-                  <label htmlFor="service" className="text-xs uppercase tracking-widest text-gold-500/80 font-semibold">Service Interest</label>
+                  <label htmlFor="service" className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-500/80 font-semibold">Service Interest</label>
                   <div className="relative">
                     <select
                       id="service"
                       name="service"
                       required
-                      className="w-full bg-luxury-black border border-gray-800 text-white p-4 focus:border-gold-500 focus:outline-none transition-colors appearance-none cursor-pointer"
+                      className="w-full bg-white dark:bg-luxury-black border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white p-4 focus:border-gold-500 focus:outline-none transition-colors appearance-none cursor-pointer"
                       defaultValue=""
                     >
                       <option value="" disabled className="text-gray-500">Select a Service</option>
@@ -109,13 +109,13 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-2 relative">
-                  <label htmlFor="budget" className="text-xs uppercase tracking-widest text-gold-500/80 font-semibold">Budget (INR)</label>
+                  <label htmlFor="budget" className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-500/80 font-semibold">Budget (INR)</label>
                   <div className="relative">
                     <select
                       id="budget"
                       name="budget"
                       required
-                      className="w-full bg-luxury-black border border-gray-800 text-white p-4 focus:border-gold-500 focus:outline-none transition-colors appearance-none cursor-pointer"
+                      className="w-full bg-white dark:bg-luxury-black border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white p-4 focus:border-gold-500 focus:outline-none transition-colors appearance-none cursor-pointer"
                       defaultValue=""
                     >
                       <option value="" disabled className="text-gray-500">Select Budget Range</option>
@@ -131,13 +131,13 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-xs uppercase tracking-widest text-gold-500/80 font-semibold">Message</label>
+                <label htmlFor="message" className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-500/80 font-semibold">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   rows={5}
-                  className="w-full bg-luxury-black border border-gray-800 text-white p-4 focus:border-gold-500 focus:outline-none transition-colors resize-none"
+                  className="w-full bg-white dark:bg-luxury-black border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white p-4 focus:border-gold-500 focus:outline-none transition-colors resize-none"
                   placeholder="Tell us about your project needs..."
                 ></textarea>
               </div>
@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group relative px-10 py-4 bg-white text-luxury-black font-bold uppercase tracking-wider overflow-hidden hover:text-white transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="group relative px-10 py-4 bg-luxury-black dark:bg-white text-white dark:text-luxury-black font-bold uppercase tracking-wider overflow-hidden hover:text-white dark:hover:text-white transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <span className="absolute inset-0 w-full h-full bg-gold-500 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
                   <span className="relative z-10 flex items-center gap-2">
